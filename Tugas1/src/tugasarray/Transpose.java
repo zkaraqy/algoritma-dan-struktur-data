@@ -1,6 +1,6 @@
 package tugasarray;
 
-public class Transpose extends Matriks {
+public class Transpose {
     
     static int[][] transpose(int[][] matriks) {
         int[][] newMatriks = new int[matriks[0].length][matriks.length];

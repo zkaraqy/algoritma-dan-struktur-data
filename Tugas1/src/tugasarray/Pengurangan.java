@@ -1,9 +1,9 @@
 package tugasarray;
 
-public class Pengurangan extends Matriks {
+public class Pengurangan {
     
     static int[][] kurangkan(int[][] matriks1, int[][] matriks2) {
-        if (!isSameDimensionMatriks(matriks1, matriks2)) {
+        if (!Matriks.isSameDimensionMatriks(matriks1, matriks2)) {
             throw new Error("Kedua matriks harus mempunyai dimensi yang sama");
         }
         int[][] matriksHasil = new int[matriks1.length][matriks2.length];

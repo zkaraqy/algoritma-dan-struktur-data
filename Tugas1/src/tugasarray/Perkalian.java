@@ -1,6 +1,6 @@
 package tugasarray;
 
-public class Perkalian extends Matriks {
+public class Perkalian {
 
     static int[][] kalikan(int[][] matriks1, int[][] matriks2) {
         int baris1 = matriks1.length;   
