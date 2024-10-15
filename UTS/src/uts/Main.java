@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package uts;
 
-/**
- *
- * @author User
- */
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -15,6 +10,16 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        arrTextFieldAngka[0] = jTextFieldAngka1;
+        arrTextFieldAngka[1] = jTextFieldAngka2;
+        arrTextFieldAngka[2] = jTextFieldAngka3;
+        arrTextFieldAngka[3] = jTextFieldAngka4;
+        arrTextFieldAngka[4] = jTextFieldAngka5;
+        arrTextFieldAngka[5] = jTextFieldAngka6;
+        arrTextFieldAngka[6] = jTextFieldAngka7;
+        arrTextFieldAngka[7] = jTextFieldAngka8;
+        arrTextFieldAngka[8] = jTextFieldAngka9;
+        arrTextFieldAngka[9] = jTextFieldAngka10;
     }
 
     /**
@@ -26,25 +31,263 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextFieldAngka1 = new javax.swing.JTextField();
+        jTextFieldAngka2 = new javax.swing.JTextField();
+        jTextFieldAngka3 = new javax.swing.JTextField();
+        jTextFieldAngka4 = new javax.swing.JTextField();
+        jTextFieldAngka5 = new javax.swing.JTextField();
+        jTextFieldAngka6 = new javax.swing.JTextField();
+        jTextFieldAngka7 = new javax.swing.JTextField();
+        jTextFieldAngka8 = new javax.swing.JTextField();
+        jTextFieldAngka9 = new javax.swing.JTextField();
+        jTextFieldAngka10 = new javax.swing.JTextField();
+        jTextFieldInputAngka = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonTambah = new javax.swing.JButton();
+        jRadioButtonBubbleSort = new javax.swing.JRadioButton();
+        jRadioButtonMergeSort = new javax.swing.JRadioButton();
+        jRadioButtonQuickSort = new javax.swing.JRadioButton();
+        jRadioButtonSequentialSort = new javax.swing.JRadioButton();
+        jRadioButtonBinarySearch = new javax.swing.JRadioButton();
+        jButtonSort = new javax.swing.JButton();
+        jButtonSearch = new javax.swing.JButton();
+        jButtonAcakAngka = new javax.swing.JButton();
+        jButtonClear = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 400));
+
+        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Urutkan Angka");
+        jLabel1.setToolTipText("");
+
+        jTextFieldAngka1.setEditable(false);
+        jTextFieldAngka1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka2.setEditable(false);
+        jTextFieldAngka2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka3.setEditable(false);
+        jTextFieldAngka3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka4.setEditable(false);
+        jTextFieldAngka4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka5.setEditable(false);
+        jTextFieldAngka5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka6.setEditable(false);
+        jTextFieldAngka6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka7.setEditable(false);
+        jTextFieldAngka7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka8.setEditable(false);
+        jTextFieldAngka8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka9.setEditable(false);
+        jTextFieldAngka9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldAngka10.setEditable(false);
+        jTextFieldAngka10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldAngka10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jTextFieldInputAngka.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextFieldInputAngka.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel2.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel2.setText("Input angka : ");
+
+        jButtonTambah.setText("Tambah");
+        jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTambahActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(jRadioButtonBubbleSort);
+        jRadioButtonBubbleSort.setText("Bubble Sort");
+
+        buttonGroup1.add(jRadioButtonMergeSort);
+        jRadioButtonMergeSort.setText("Merge Sort");
+
+        buttonGroup1.add(jRadioButtonQuickSort);
+        jRadioButtonQuickSort.setText("Quick Sort");
+
+        buttonGroup2.add(jRadioButtonSequentialSort);
+        jRadioButtonSequentialSort.setText("Sequential Search");
+
+        buttonGroup2.add(jRadioButtonBinarySearch);
+        jRadioButtonBinarySearch.setText("Binary Search");
+
+        jButtonSort.setText("Sortir");
+
+        jButtonSearch.setText("Cari");
+
+        jButtonAcakAngka.setText("Acak Angka");
+
+        jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonSort)
+                            .addComponent(jRadioButtonBubbleSort, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButtonQuickSort, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(77, 77, 77)
+                                        .addComponent(jTextFieldInputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jRadioButtonMergeSort, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButtonSearch)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButtonClear))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jRadioButtonSequentialSort, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jRadioButtonBinarySearch, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButtonTambah)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonAcakAngka))))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldAngka10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 25, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAngka10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldInputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAcakAngka))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jRadioButtonBubbleSort)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonMergeSort)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButtonQuickSort))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonSequentialSort)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButtonBinarySearch)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonSort)
+                    .addComponent(jButtonSearch)
+                    .addComponent(jButtonClear))
+                .addGap(0, 77, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jButtonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTambahActionPerformed
+        double angka = Double.parseDouble(jTextFieldInputAngka.getText());
+        try {
+            int idx = arrayAngka.add(angka);
+            arrTextFieldAngka[idx].setText(String.valueOf(angka));
+        } catch (Error e) {
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButtonTambahActionPerformed
+
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+        for (int i = 0; i < arrTextFieldAngka.length; i++) {
+            arrTextFieldAngka[i].setText("");
+        }
+    }//GEN-LAST:event_jButtonClearActionPerformed
+    
+    public ArrayAngka arrayAngka = new ArrayAngka();
+    public JTextField[] arrTextFieldAngka = new JTextField[10];
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -78,5 +321,31 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButtonAcakAngka;
+    private javax.swing.JButton jButtonClear;
+    private javax.swing.JButton jButtonSearch;
+    private javax.swing.JButton jButtonSort;
+    private javax.swing.JButton jButtonTambah;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButtonBinarySearch;
+    private javax.swing.JRadioButton jRadioButtonBubbleSort;
+    private javax.swing.JRadioButton jRadioButtonMergeSort;
+    private javax.swing.JRadioButton jRadioButtonQuickSort;
+    private javax.swing.JRadioButton jRadioButtonSequentialSort;
+    private javax.swing.JTextField jTextFieldAngka1;
+    private javax.swing.JTextField jTextFieldAngka10;
+    private javax.swing.JTextField jTextFieldAngka2;
+    private javax.swing.JTextField jTextFieldAngka3;
+    private javax.swing.JTextField jTextFieldAngka4;
+    private javax.swing.JTextField jTextFieldAngka5;
+    private javax.swing.JTextField jTextFieldAngka6;
+    private javax.swing.JTextField jTextFieldAngka7;
+    private javax.swing.JTextField jTextFieldAngka8;
+    private javax.swing.JTextField jTextFieldAngka9;
+    private javax.swing.JTextField jTextFieldInputAngka;
     // End of variables declaration//GEN-END:variables
 }

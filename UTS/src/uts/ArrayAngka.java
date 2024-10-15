@@ -3,14 +3,15 @@ package uts;
 public class ArrayAngka {
 
     protected double[] arrayAngka = new double[10];
+    protected int idx = 0;
     private boolean isSorted = false;
-    private final BubbleSort bubbleSort = new BubbleSort();
-    private final MergeSort mergeSort = new MergeSort();
-    private final QuickSort quickSort = new QuickSort();
-    private final RandomizeArrayAngka randomizeArrayAngka = new RandomizeArrayAngka();
-    private final SequentialSearch sequentialSearch = new SequentialSearch();
-    private final BinarySearch binarySearch = new BinarySearch();
-
+    private BubbleSort bubbleSort;
+    private MergeSort mergeSort;
+    private QuickSort quickSort;
+    private RandomizeArrayAngka randomizeArrayAngka;
+    private SequentialSearch sequentialSearch;
+    private BinarySearch binarySearch;
+    
     boolean isIsSorted() {
         return isSorted;
     }
@@ -23,7 +24,17 @@ public class ArrayAngka {
         return arrayAngka;
     }
 
-    void setAngkaAtIndex(int index, int angka) {
+    int add(double angka) {
+        if (idx < arrayAngka.length) {
+            arrayAngka[idx] = angka;
+            idx++;
+            return idx - 1;
+        } else {
+            throw new Error("Array Angka Telah Penuh!");
+        }
+    }
+
+    void setAngkaAtIndex(int index, double angka) {
         arrayAngka[index] = angka;
     }
 
@@ -31,17 +42,17 @@ public class ArrayAngka {
         return arrayAngka[index];
     }
 
-    void bubbleSort() {
+    void doBubbleSort() {
         bubbleSort.sort();
         setIsSorted(true);
     }
 
-    void mergeSort() {
+    void doMergeSort() {
         mergeSort.sort(0, arrayAngka.length - 1);
         setIsSorted(true);
     }
 
-    void quickSort() {
+    void doQuickSort() {
         quickSort.sort(0, arrayAngka.length - 1);
         setIsSorted(true);
     }
@@ -51,11 +62,11 @@ public class ArrayAngka {
         setIsSorted(false);
     }
 
-    int sequentialSearch(double target) {
+    int doSequentialSearch(double target) {
         return sequentialSearch.search(target);
     }
-    
-    int binarySearch(double target) {
+
+    int doBinarySearch(double target) {
         return binarySearch.search(target);
     }
 }
