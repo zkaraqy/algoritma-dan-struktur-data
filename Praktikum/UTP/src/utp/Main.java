@@ -51,18 +51,30 @@ public class Main {
                     break;
 
                 case 4:
+                    if (arrayPasien.getJumlahPasien() == 0) {
+                        System.out.println("Rumah Sakit Belum Memiliki Pasien");
+                        break;
+                    }
                     arrayPasien.quickSortBerdasarkanNamaLengkap(0, arrayPasien.getJumlahPasien() - 1);
                     System.out.println("Array Pasien Setelah Diurutkan Berdasarkan Nama Lengkap : ");
                     arrayPasien.printSemuaDataPasien(0);
                     break;
 
                 case 5:
+                    if (arrayPasien.getJumlahPasien() == 0) {
+                        System.out.println("Rumah Sakit Belum Memiliki Pasien");
+                        break;
+                    }
                     arrayPasien.quickSortBerdasarkanBeratBadan(0, arrayPasien.getJumlahPasien() - 1);
                     System.out.println("Array Pasien Setelah Diurutkan Berdasarkan Berat Badan : ");
                     arrayPasien.printSemuaDataPasien(0);
                     break;
 
                 case 6:
+                    if (arrayPasien.getJumlahPasien() == 0) {
+                        System.out.println("Rumah Sakit Belum Memiliki Pasien");
+                        break;
+                    }
                     arrayPasien.quickSortBerdasarkanTinggiBadan(0, arrayPasien.getJumlahPasien() - 1);
                     System.out.println("Array Pasien Setelah Diurutkan Berdasarkan Tinggi Badan : ");
                     arrayPasien.printSemuaDataPasien(0);

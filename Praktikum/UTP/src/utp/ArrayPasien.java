@@ -1,8 +1,5 @@
 package utp;
 
-import java.util.Scanner;
-import java.util.Arrays;
-
 public class ArrayPasien {
 
     static int length = 15;
@@ -11,10 +8,6 @@ public class ArrayPasien {
 
     public int getJumlahPasien() {
         return jumlahPasien;
-    }
-
-    public ArrayPasien() {
-//        System.out.println(Arrays.toString(arrayPasien));
     }
 
     public Pasien[] getArrayPasien() {
@@ -38,11 +31,19 @@ public class ArrayPasien {
         }
         int index = cariIndexPasien(namaLengkap);
         if (index == -1) {
-            System.out.println("Pasian atas nama " + namaLengkap + " tidak ditemukan");
             return false;
         }
-        arrayPasien[index] = null;
+        jumlahPasien--;
+        hapusPasienRekursi(index);
         return true;
+    }
+
+    void hapusPasienRekursi(int index) {
+        if (index == this.jumlahPasien) {
+            return;
+        }
+        arrayPasien[index] = arrayPasien[index + 1];
+        hapusPasienRekursi(++index);
     }
 
     int cariIndexPasien(String namaLengkap) {
@@ -50,7 +51,7 @@ public class ArrayPasien {
             System.out.println("Rumah Sakit Belum Memiliki Pasien");
             return -1;
         }
-        for (int i = 0; i < arrayPasien.length; i++) {
+        for (int i = 0; i < jumlahPasien; i++) {
             Pasien pasien = arrayPasien[i];
             if (pasien.getNamaLengkap().equalsIgnoreCase(namaLengkap)) {
                 return i;
@@ -66,7 +67,6 @@ public class ArrayPasien {
         }
         if (low < high) {
             int pivotIndex = partitionBeratBadan(low, high);
-
             quickSortBerdasarkanBeratBadan(low, pivotIndex - 1);
             quickSortBerdasarkanBeratBadan(pivotIndex + 1, high);
         }
@@ -76,11 +76,9 @@ public class ArrayPasien {
         double pivot = arrayPasien[high].getBeratBadan();
         int i = low - 1;
         i = rekurcionSwapDataBeratBadan(low, high, pivot, i);
-        System.out.println(i);
-        double temp = arrayPasien[i + 1].getBeratBadan();
-        arrayPasien[i + 1].setBeratBadan(arrayPasien[high].getBeratBadan());
-        arrayPasien[high].setBeratBadan(temp);
-
+        Pasien temp = arrayPasien[i + 1];
+        arrayPasien[i + 1] = arrayPasien[high];
+        arrayPasien[high] = temp;
         return i + 1;
     }
 
@@ -91,9 +89,9 @@ public class ArrayPasien {
         double data = arrayPasien[j].getBeratBadan();
         if (data <= pivot) {
             i++;
-            double temp = arrayPasien[i].getBeratBadan();
-            arrayPasien[i].setBeratBadan(arrayPasien[j].getBeratBadan());
-            arrayPasien[j].setBeratBadan(temp);
+            Pasien temp = arrayPasien[i];
+            arrayPasien[i] = arrayPasien[j];
+            arrayPasien[j] = temp;
         }
         j += 1;
         return rekurcionSwapDataBeratBadan(j, high, pivot, i);
@@ -106,7 +104,6 @@ public class ArrayPasien {
         }
         if (low < high) {
             int pivotIndex = partitionTinggiBadan(low, high);
-
             quickSortBerdasarkanTinggiBadan(low, pivotIndex - 1);
             quickSortBerdasarkanTinggiBadan(pivotIndex + 1, high);
         }
@@ -116,10 +113,9 @@ public class ArrayPasien {
         double pivot = arrayPasien[high].getTinggiBadan();
         int i = low - 1;
         i = rekurcionSwapDataTinggiBadan(low, high, pivot, i);
-        double temp = arrayPasien[i + 1].getTinggiBadan();
-        arrayPasien[i + 1].setTinggiBadan(arrayPasien[high].getTinggiBadan());
-        arrayPasien[high].setTinggiBadan(temp);
-
+        Pasien temp = arrayPasien[i + 1];
+        arrayPasien[i + 1] = arrayPasien[high];
+        arrayPasien[high] = temp;
         return i + 1;
     }
 
@@ -130,23 +126,21 @@ public class ArrayPasien {
         double data = arrayPasien[j].getTinggiBadan();
         if (data <= pivot) {
             i++;
-            double temp = arrayPasien[i].getTinggiBadan();
-            arrayPasien[i].setTinggiBadan(arrayPasien[j].getTinggiBadan());
-            arrayPasien[j].setTinggiBadan(temp);
+            Pasien temp = arrayPasien[i];
+            arrayPasien[i] = arrayPasien[j];
+            arrayPasien[j] = temp;
         }
         j += 1;
         return rekurcionSwapDataTinggiBadan(j, high, pivot, i);
     }
 
     void quickSortBerdasarkanNamaLengkap(int low, int high) {
-        System.out.println(high);
         if (jumlahPasien == 0) {
             System.out.println("Rumah Sakit Belum Memiliki Pasien");
             return;
         }
         if (low < high) {
             int pivotIndex = partitionNamaLengkap(low, high);
-
             quickSortBerdasarkanNamaLengkap(low, pivotIndex - 1);
             quickSortBerdasarkanNamaLengkap(pivotIndex + 1, high);
         }
@@ -156,10 +150,9 @@ public class ArrayPasien {
         String pivot = arrayPasien[high].getNamaLengkap();
         int i = low - 1;
         i = rekurcionSwapDataNamaLengkap(low, high, pivot, i);
-        String temp = arrayPasien[i + 1].getNamaLengkap();
-        arrayPasien[i + 1].setNamaLengkap(arrayPasien[high].getNamaLengkap());
-        arrayPasien[high].setNamaLengkap(temp);
-
+        Pasien temp = arrayPasien[i + 1];
+        arrayPasien[i + 1] = arrayPasien[high];
+        arrayPasien[high] = temp;
         return i + 1;
     }
 
@@ -168,11 +161,11 @@ public class ArrayPasien {
             return i;
         }
         String data = arrayPasien[j].getNamaLengkap();
-        if (data.compareToIgnoreCase(data) < 0) {
+        if (data.compareToIgnoreCase(pivot) < 0) {
             i++;
-            String temp = arrayPasien[i].getNamaLengkap();
-            arrayPasien[i].setNamaLengkap(arrayPasien[j].getNamaLengkap());
-            arrayPasien[j].setNamaLengkap(temp);
+            Pasien temp = arrayPasien[i];
+            arrayPasien[i] = arrayPasien[j];
+            arrayPasien[j] = temp;
         }
         j += 1;
         return rekurcionSwapDataNamaLengkap(j, high, pivot, i);
@@ -195,7 +188,7 @@ public class ArrayPasien {
             System.out.println("Rumah Sakit Belum Memiliki Pasien");
             return;
         }
-        System.out.println("------------------------------------------");
+        System.out.println("-------------------------------------------------");
         System.out.println("Nama Lengkap : " + pasien.getNamaLengkap());
         System.out.println("Tanggal Lahir : " + pasien.getTanggalLahir());
         System.out.println("Riwayat Penyakit : " + pasien.getRiwayatPenyakit());
@@ -203,7 +196,7 @@ public class ArrayPasien {
         System.out.println("Dokter Penanggung Jawab : " + pasien.getDokterPenanggungJawab());
         System.out.println("Berat Badan : " + pasien.getBeratBadan() + " Kg");
         System.out.println("Tinggi Badan : " + pasien.getTinggiBadan() + " Cm");
-        System.out.println("------------------------------------------");
+        System.out.println("-------------------------------------------------");
     }
 
 }
