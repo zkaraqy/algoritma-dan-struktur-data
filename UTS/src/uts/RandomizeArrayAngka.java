@@ -2,9 +2,13 @@ package uts;
 
 import java.util.Random;
 
-public class RandomizeArrayAngka extends ArrayAngka {
+public class RandomizeArrayAngka {
+    
+    void RandomizeArrayAngka() {
+        
+    }
 
-    void randomize() {
+    double[] randomize(double[] arrayAngka) {
         Random rand = new Random();
         for (int i = arrayAngka.length - 1; i > 0; i--) {
             int index = rand.nextInt(i + 1);
@@ -12,5 +16,6 @@ public class RandomizeArrayAngka extends ArrayAngka {
             arrayAngka[i] = arrayAngka[index];
             arrayAngka[index] = temp;
         }
+        return arrayAngka;
     }
 }

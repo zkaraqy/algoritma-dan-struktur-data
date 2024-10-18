@@ -1,8 +1,12 @@
 package uts;
 
-public class BinarySearch extends ArrayAngka {
+public class BinarySearch {
+    
+    void BinarySearch() {
+        
+    }
 
-    int search(double target) {
+    int search(double[] arrayAngka, double target) {
         int start = 0;
         int end = arrayAngka.length - 1;
         while (start <= end) {

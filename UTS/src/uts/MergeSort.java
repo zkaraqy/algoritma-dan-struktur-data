@@ -1,18 +1,23 @@
 package uts;
 
-public class MergeSort extends ArrayAngka {
+public class MergeSort {
+    
+    void MergeSort() {
+        
+    }
 
-    void sort(int left, int right) {
+    double[] sort(double[] arrayAngka, int left, int right) {
         int mid;
         if (left < right) {
             mid = (left + right) / 2;
-            sort(left, mid);
-            sort(mid + 1, right);
-            merge(left, mid, right);
+            sort(arrayAngka, left, mid);
+            sort(arrayAngka, mid + 1, right);
+            merge(arrayAngka, left, mid, right);
         }
+        return arrayAngka;
     }
 
-    private void merge(int left, int mid, int right) {
+    private void merge(double[] arrayAngka, int left, int mid, int right) {
         int i, j, k;
         int n1 = mid - left + 1;
         int n2 = right - mid;

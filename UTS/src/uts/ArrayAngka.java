@@ -2,8 +2,8 @@ package uts;
 
 public class ArrayAngka {
 
-    protected double[] arrayAngka = new double[10];
-    protected int idx = 0;
+    private double[] arrayAngka = new double[10];
+    private int idx = 0;
     private boolean isSorted = false;
     private BubbleSort bubbleSort;
     private MergeSort mergeSort;
@@ -11,7 +11,20 @@ public class ArrayAngka {
     private RandomizeArrayAngka randomizeArrayAngka;
     private SequentialSearch sequentialSearch;
     private BinarySearch binarySearch;
-    
+
+    public ArrayAngka() {
+        bubbleSort = new BubbleSort();
+        mergeSort = new MergeSort();
+        quickSort = new QuickSort();
+        randomizeArrayAngka = new RandomizeArrayAngka();
+        sequentialSearch = new SequentialSearch();
+        binarySearch = new BinarySearch();
+    }
+
+    int getIndex() {
+        return idx;
+    }
+
     boolean isIsSorted() {
         return isSorted;
     }
@@ -22,6 +35,10 @@ public class ArrayAngka {
 
     double[] getArrayAngka() {
         return arrayAngka;
+    }
+
+    void setArrayAngka(double[] arr) {
+        arrayAngka = arr;
     }
 
     int add(double angka) {
@@ -43,30 +60,38 @@ public class ArrayAngka {
     }
 
     void doBubbleSort() {
-        bubbleSort.sort();
+        arrayAngka = bubbleSort.sort(arrayAngka);
         setIsSorted(true);
     }
 
     void doMergeSort() {
-        mergeSort.sort(0, arrayAngka.length - 1);
+        arrayAngka = mergeSort.sort(arrayAngka, 0, arrayAngka.length - 1);
         setIsSorted(true);
     }
 
     void doQuickSort() {
-        quickSort.sort(0, arrayAngka.length - 1);
+        arrayAngka = quickSort.sort(arrayAngka, 0, arrayAngka.length - 1);
         setIsSorted(true);
     }
 
     void randomize() {
-        randomizeArrayAngka.randomize();
+        arrayAngka = randomizeArrayAngka.randomize(arrayAngka);
         setIsSorted(false);
     }
 
     int doSequentialSearch(double target) {
-        return sequentialSearch.search(target);
+        return sequentialSearch.search(arrayAngka, target);
     }
 
     int doBinarySearch(double target) {
-        return binarySearch.search(target);
+        return binarySearch.search(arrayAngka, target);
+    }
+
+    void resetArrayAngka() {
+        for (int i = 0; i < arrayAngka.length; i++) {
+            arrayAngka[i] = 0;
+        }
+        setIsSorted(false);
+        idx = 0;
     }
 }
