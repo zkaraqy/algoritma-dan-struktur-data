@@ -23,9 +23,8 @@ public class MergeSort {
         int n2 = right - mid;
 
         double[] L = new double[n1];
-        double[] R = new double[n2]; //temporary arrays  
+        double[] R = new double[n2]; 
 
-        /* copy data to temp arrays */
         for (i = 0; i < n1; i++) {
             L[i] = arrayAngka[left + i];
         }
@@ -34,11 +33,8 @@ public class MergeSort {
         }
 
         i = 0;
-        /* initial index of first sub-array */
         j = 0;
-        /* initial index of second sub-array */
         k = left;
-        /* initial index of merged sub-array */
 
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
